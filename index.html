@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zelda</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <section class="hero">
+      <div class="hero-body">
+        <p class="title">⚔️ Hyrule Compendium</p>
+        <p class="subtitle">Enciclopédia de Breath of the Wild</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="box">
+        <h2 class="title is-4">📚 Escolha uma Categoria:</h2>
+        <div>
+          <button id="criaturas" class="button is-danger is-light">Criaturas</button>
+          <button id="monstros" class="button is-warning is-light">Monstros</button>
+          <button id="materiais" class="button is-success is-light">Materiais</button>
+          <button id="equipamentos" class="button is-info is-light">Equipamentos</button>
+          <button id="tesouros" class="button is-link is-light">Tesouros</button>
+
+        </div>
+      </div>
+
+      <div class="box filtrar">
+        <h2 class="title is-4">🔍 Filtrar Resultados:</h2>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input id="input" class="input is-medium" type="text" placeholder="Digite seu filtro..." />
+            <span class="icon is-small is-left">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </p>
+        </div>
+        <p>Total de itens encontrados: <span id="total-itens">0</span></p>
+      </div>
+
+    <div class="box carregando">
+      <h3>Carregando...</h3>
+      <progress class="progress is-large is-info" max="100">100%</progress>
+    </div>
+    </section>
+
+    <section class="section section-resultados">
+      <h3 class="title is-2">Total de itens buscados: <span id="total-itens-buscados">0</span></h3>
+      <div class="resultados"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
